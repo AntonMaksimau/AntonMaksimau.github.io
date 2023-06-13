@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Podsumowanie zamówienia</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		.order-summary {
+			background-color: #fff;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 500px;
+			margin: auto;
+			text-align: center;
+			padding: 20px;
+			border-radius: 5px;
+			position: relative;
+		}
+		.order-summary h2 {
+			font-size: 24px;
+			color: #333;
+			margin-top: 10px;
+		}
+		.order-summary p {
+			font-size: 16px;
+			color: #666;
+			margin-bottom: 5px;
+		}
+		.order-summary label {
+			display: block;
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;
+		}
+		.order-summary span {
+			font-size: 16px;
+			color: #666;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Podsumowanie zamówienia</h1>
+	<div class="order-summary">
+		<h2>Dziękujemy za złożenie zamówienia!</h2>
+		<label>Wybrany samochód:</label>
+		<span id="car"></span>
+		<label>Cena:</label>
+		<span id="price"></span>
+		<label>Imię i nazwisko:</label>
+		<span id="name"></span>
+		<label>Email:</label>
+		<span id="email"></span>
+		<label>Telefon:</label>
+		<span id="phone"></span>
+		<label>Data odbioru:</label>
+		<span id="date"></span>
+		<label>Dodatkowe akcesoria:</label>
+		<span id="accessories"></span>
+		<label>Łączna cena:</label>
+		<span id="totalPrice"></span>
+		<button class="btn" onclick="returnToSelection()">Wybierz inny samochód</button>
+		<button class="btn" onclick="window.print()">Wydrukuj potwierdzenie</button>
+	</div>
+	<script>
+		// Get the order data from the form
+		const orderData = JSON.parse(localStorage.getItem("orderData"));
+
+		// Display the order summary on the page
+        document.getElementById('name').innerHTML = localStorage.getItem('name');
+
+		let accessoriesText = "";
+		if (orderData.accessory1) {
+			accessoriesText += orderData.accessory1 + ", ";
+		}
+		if (orderData.accessory2) {
+			accessoriesText += orderData.accessory2 + ", ";
+		}
+		if (orderData.accessory3) {
+			accessoriesText += orderData.accessory3 + ", ";
+		}
+		if (accessoriesText) {
+			accessoriesText = accessoriesText.slice(0, -2);
+		}
+		document.getElementById("accessories").textContent = accessoriesText;
+
+		document.getElementById("totalPrice").textContent = orderData.price + " PLN";
+
+		// Function to return to the car selection page
+		function returnToSelection() {
+			localStorage.removeItem("orderData");
+			window.location.href = "index.html";
+		}
+	</script>
+</body>
+</html>

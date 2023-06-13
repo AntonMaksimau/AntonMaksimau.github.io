@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Oferta sprzedaży samochodów</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		.car {
+			background-color: #fff;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 300px;
+			margin: auto;
+			text-align: center;
+			padding: 20px;
+		}
+		.car img {
+			max-width: 100%;
+			height: auto;
+		}
+		.car h2 {
+			font-size: 24px;
+			color: #333;
+			margin-top: 10px;
+		}
+		.car p {
+			font-size: 16px;
+			color: #666;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+		.form-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 9;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            max-width: 500px;
+            height: 540px; /* Добавлено для ограничения высоты формы */
+            padding: 20px;
+            border-radius: 5px;
+            overflow-y: scroll; /* Добавлено для прокрутки контента внутри формы */
+        }
+
+        .form-container input[type=text],
+        .form-container input[type=date],
+        .form-container select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type=submit],
+        .form-container input[type=button] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+		.close {
+			position: absolute;
+			top: 5px;
+			right: 60px;
+			font-size: 28px;
+			font-weight: bold;
+			color: #f00;
+            background-color: #fff;
+			cursor: pointer;
+		}
+		.accessories ul {
+			list-style: none;
+			padding: 0;
+		}
+		.accessories ul li {
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Oferta sprzedaży samochodów</h1>
+	<div class="car">
+		<img src="samochod1.jpg" alt="Samochód 1">
+		<h2>FIAT 500 Lounge</h2>
+		<p>Cena: 50000 PLN</p>
+		<button class="btn" onclick="openForm('FIAT 500 Lounge', 50000)">Kup teraz</button>
+	</div>
+
+	<div class="car">
+		<img src="samochod2.jpg" alt="Samochód 2">
+		<h2>Toyota Yaris</h2>
+		<p>Cena: 75000 PLN</p>
+		<button class="btn" onclick="openForm('Toyota Yaris', 75000)">Kup teraz</button>
+	</div>
+
+	<div class="car">
+		<img src="samochod3.jpg" alt="Samochód 3">
+		<h2>BMW X5</h2>
+		<p>Cena: 90000 PLN</p>
+		<button class="btn" onclick="openForm('BMW X5', 90000)">Kup teraz</button>
+	</div>
+
+	<div class="form-popup" id="myForm">
+		<div class="form-container">
+			<span class="close" onclick="closeForm()">&times;</span>
+			<h2>Zamówienie</h2>
+			<form action="end.html" method="post">
+				<label for="car">Wybrany samochód:</label>
+				<input type="text" id="car" name="car" readonly>
+				<label for="price">Cena:</label>
+				<input type="text" id="price" name="price" readonly>
+				<label for="name">Imię i nazwisko:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email:</label>
+				<input type="text" id="email" name="email" required>
+				<label for="phone">Telefon:</label>
+				<input type="text" id="phone" name="phone" required>
+				<label for="date">Data odbioru:</label>
+				<input type="date" id="date" name="date" required>
+				<label for="accessories">Dodatkowe akcesoria:</label>
+				<div class="accessories">
+					<ul>
+						<li><input type="checkbox" id="accessory1" name="accessory1" value="Dodatkowe oświetlenie"><label for="accessory1">Dodatkowe oświetlenie</label></li>
+						<li><input type="checkbox" id="accessory2" name="accessory2" value="Dodatkowe głośniki"><label for="accessory2">Dodatkowe głośniki</label></li>
+						<li><input type="checkbox" id="accessory3" name="accessory3" value="Dodatkowe felgi"><label for="accessory3">Dodatkowe felgi</label></li>
+					</ul>
+				</div>
+				<input type="submit" value="Zamów">
+			</form>
+		</div>
+	</div>
+
+	<script>
+		function openForm(car, price) {
+			document.getElementById("car").value = car;
+			document.getElementById("price").value = price;
+			document.getElementById("myForm").style.display = "flex";
+		}
+
+		function closeForm() {
+			document.getElementById("myForm").style.display = "none";
+		}
+        localStorage.setItem('name', document.getElementById('name').value);
+	</script>
+
+</body>
+</html>
