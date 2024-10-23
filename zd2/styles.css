@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#header {
+    background-color: #b0d7e9;
+    padding: 10px;
+}
+
+#logo {
+    float: left;
+    height: 100px;
+}
+
+#title-bar {
+    display: inline-block;
+    width: calc(100% - 120px);
+    vertical-align: top;
+    text-align: center;
+}
+
+#title-bar h1 {
+    font-family: "Times New Roman", serif;
+    color: #0000ff;
+    font-size: 36px;
+}
+
+#nav {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+}
+
+#nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bold;
+}
+
+#content {
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#mice-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#contact-form {
+    margin-top: 20px;
+}
+
+#contact-form h2 {
+    color: #0000ff;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+#footer {
+    background-color: #b0d7e9;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
