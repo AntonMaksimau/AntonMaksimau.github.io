@@ -1,0 +1,109 @@
+[{
+    "school": "Technikum19",
+    "Data": [
+        {
+            "key": "Dyżur",
+            "Name": "Jan Kowalski",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "6.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "14.00"
+        },
+        {
+            "key": "A21",
+            "Name": "Anna Nowak",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "7.30",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "13.30"
+        },
+        {
+            "key": "A22",
+            "Name": "Marek Wiśniewski",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "8.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "12.00"
+        },
+        {
+            "key": "A23",
+            "Name": "Katarzyna Zielińska",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "6.30",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "10.30"
+        },
+        {
+            "key": "A24",
+            "Name": "Tomasz Wójcik",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "9.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "15.00"
+        },
+        {
+            "key": "A25",
+            "Name": "Agnieszka Lewandowska",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "10.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "16.00"
+        },
+        {
+            "key": "A26",
+            "Name": "Piotr Kamiński",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "11.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "17.00"
+        },
+        {
+            "key": "A27",
+            "Name": "Ewa Szymańska",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "12.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "18.00"
+        },
+        {
+            "key": "A28",
+            "Name": "Rafał Dąbrowski",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "13.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "19.00"
+        },
+        {
+            "key": "B15",
+            "Name": "Monika Król",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "14.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "20.00"
+        },
+        {
+            "key": "B16",
+            "Name": "Karol Kaczmarek",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "15.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "21.00"
+        },
+        {
+            "key": "B23",
+            "Name": "Maria Jankowska",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "16.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "22.00"
+        },
+        {
+            "key": "B25",
+            "Name": "Grzegorz Woźniak",
+            "KeyTakenDate": "08.01.2025r",
+            "KeyTakenTime": "17.00",
+            "KeyGivenDate": "08.01.2025r",
+            "KeyGivenTime": "23.00"
+        }
+    ]
+}]
